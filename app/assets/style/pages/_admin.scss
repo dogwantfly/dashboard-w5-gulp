@@ -46,6 +46,11 @@
 }
 
 //table
+
+.table .table-title{
+    border: 0;
+    border-bottom: 1px solid #000;
+}
 .table th,td{
     cursor: pointer;
 }
