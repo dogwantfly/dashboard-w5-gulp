@@ -1,0 +1,134 @@
+//header
+.header{
+    
+    .title{
+        font-size: $font-size-lg;
+    }
+    
+}
+.content{
+    overflow: hidden;
+}
+
+//下拉選單
+.btn-light-light{
+    background-color: $white;
+    border-color: $white;
+}
+
+.comments{
+    color: $gray-700;
+    font-size: $font-size-xs;
+}
+
+//list
+.list-group-item{
+    border-color: $border-color;
+    cursor: pointer;
+    &.active{
+        background-color: $primary;
+        color: $dark;
+        border-color: $border-color;
+    }
+    &:hover{
+        background-color: $primary;
+        color: $dark;
+        border-color: $border-color;
+    }
+}
+.list-group-item:first-child{
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0.125rem;
+    border-bottom-left-radius: 0.125rem;
+}
+
+//card
+.card{
+    border:none;
+}
+
+.card-header {
+    background-color: $primary;
+    border: 1px solid $border-color;
+}
+.card-body{
+    border: 1px solid $border-color;
+    border-top: 0;
+    border-bottom-right-radius: 0.125rem;
+    border-bottom-left-radius: 0.125rem;
+}
+
+.photo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.code{
+    background-color: $primary;
+    color: $secondary;
+}
+.btn-file{
+    border: 1px solid $border-color;
+    color: $dark;
+    background-color: $primary;
+    &:hover{
+        background-color: $border-color;
+    }
+}
+
+
+.btn-star-fill{
+    display: none;
+    color: $secondary;
+}
+.btn-edit{
+    background-color: transparent;
+    border: none;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        color: $secondary;
+    }
+}
+.btn-arrow{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.125rem;
+    &:focus{
+        outline-color: $gray-200;
+    }
+    &:hover{
+        border: 1px solid $gray-600;
+    }
+}
+
+.recommand-list{
+    list-style: disc;
+}
+
+//reply
+.manager-reply{
+    left: 110%;
+    right: 0;
+    bottom: -100%;
+    z-index: 1;
+    transition: all 0.5s;
+    &.show {
+        left: 0;
+        bottom: -1%;
+      }
+}
+
+.reply-content{
+    width: 100%;
+    min-height: 160px;
+    &::placeholder{
+        color: $gray-800;
+    }
+}

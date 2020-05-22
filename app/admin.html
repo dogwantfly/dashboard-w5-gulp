@@ -1,0 +1,454 @@
+---
+title: Admin
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+        
+
+<header class="header  font-family-lato font-weight-bold py-5 mb-1">
+
+  <div class="row ">
+    
+    <div class="col-2 d-flex align-items-center ">
+      <h2 class="title m-0 font-weight-bold ">Admin</h2>
+      
+    </div>
+    
+    <div class="col-2">
+     
+      <!-- 新增 -->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-light-light d-flex align-items-center font-weight-bold px-0" data-toggle="modal" data-target="#exampleModalLong">
+        <span class="material-icons mr-1 text-secondary">add</span>
+        Add New Admin
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content px-4">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">New Admin</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- account -->
+              <form action="">
+                <h5 class="mb-4">Account</h5>
+                <label for="name" class="font-size-sm font-weight-normal mb-1">Name</label>
+                <br>
+                <input type="text" id="name" class="w-100 py-2 px-4 mb-4">
+                <br>
+                <label for="email" class="font-size-sm font-weight-normal mb-1">Email</label>
+                <br>
+                <input type="text" id="email" class="w-100 py-2 px-4">
+              </form>
+              <hr class="hr my-5">
+
+              <!-- Verification -->
+              <h5 class="mb-4">Verification</h5>
+              <span class="d-flex align-items-center mb-4">
+                <i class="material-icons warn mr-2">
+                  warning
+                </i>
+                unverified
+              </span>
+              <button type="button" class="btn btn-outline-secondary btn-vertify w-100">Send Verification Mail</button>
+              <hr class="hr my-4">
+
+              <!-- access level -->
+              <h5 class="mb-4">Access Level</h5>
+              <select name="access" id="access" class="btn btn-access d-flex align-items-center justify-content-between w-100 px-4">
+                
+                <option value="-Choose access level-">-Choose access level-</option>
+                <option value="admin">Admin</option>
+              </select>
+              
+              <hr class="hr">
+
+              <!-- Custom Access -->
+              <h5 class="mb-4">Custom Access</h5>
+              <ul class="form-check p-0">
+                <label class="access-option font-weight-normal">Lecture
+                  <input type="checkbox" >
+                  <span class="checkmark"></span>
+                </label>
+                <label class="access-option font-weight-normal">Coupon
+                  <input type="checkbox" >
+                  <span class="checkmark"></span>
+                </label>
+                <label class="access-option font-weight-normal">Message
+                  <input type="checkbox" >
+                  <span class="checkmark"></span>
+                </label>
+                <label class="access-option font-weight-normal">Setting
+                  <input type="checkbox" >
+                  <span class="checkmark"></span>
+                </label>
+                <label class="access-option font-weight-normal">Task menu
+                  <input type="checkbox" >
+                  <span class="checkmark"></span>
+                </label>
+                
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary px-6 py-2" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-secondary px-6 py-2">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  
+    <!-- search/notification -->
+    <div class="col-8 d-flex justify-content-end align-items-center ">
+      
+        <input type="search" id="search">
+        <label for="search" class="d-flex align-items-center m-0">
+          <a href="#" class="d-block">
+            <span class="material-icons d-block">search</span>
+          </a>
+        </label>
+        
+        
+        <a href="#" class="d-flex align-items-center ml-4">
+          <span class="material-icons">notifications_active</span>
+        </a>
+        
+    </div>
+  </div>
+  
+</header>
+
+
+<section class="content pb-6">
+
+  <!-- 表格 -->
+  <table class="table mb-9">
+    <thead>
+      <tr>
+        <th scope="col">ID <i class="fas fa-arrow-down"></i></th>
+        <th scope="col" >Name</th>
+        <th scope="col" >Email</th>
+        <th scope="col" >Verified</th>
+        <th scope="col" ></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" data-toggle="modal" data-target="#exampleModal-view"># 1</th>
+        <td data-toggle="modal" data-target="#exampleModal-view">Emir Wicks</td>
+        <td data-toggle="modal" data-target="#exampleModal-view">emir.wicks@mail.com</td>
+        <td data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#"   data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"  data-toggle="modal" data-target="#exampleModal-view"># 2</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Zaina Goldsmith</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">zaina.goldsmith@mail.com</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"  data-toggle="modal" data-target="#exampleModal-view"># 3</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Mahima Lopez</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Mahima.Lopez@mail.com</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+  
+      </tr>
+      <tr>
+        <th scope="row"  data-toggle="modal" data-target="#exampleModal-view"># 4</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Pharrell Murray</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Pharrell.Murray@mail.com</td>
+        <td data-toggle="modal" data-target="#exampleModal-view" >Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"  data-toggle="modal" data-target="#exampleModal-view"># 5</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Annika Mcbride</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Annika.Mcbride@mail.com</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-toggle="modal" data-target="#exampleModal-view" ># 6</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Fatimah Clark</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Fatimah.Clark@mail.com</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-toggle="modal" data-target="#exampleModal-view" ># 7</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Klaudia Rhodes</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Klaudia.Rhodes@mail.com</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"  data-toggle="modal" data-target="#exampleModal-view"># 8</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Tillie Lucero</td>
+        <td data-toggle="modal" data-target="#exampleModal-view" >Tillie.Lucero@mail.com</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"  data-toggle="modal" data-target="#exampleModal-view"># 9</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Sabrina Stephenson</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Sabrina.Stephenson@mail.com</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"  data-toggle="modal" data-target="#exampleModal-view"># 10</th>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Annie Smith</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Annie.Smith@mail.com</td>
+        <td  data-toggle="modal" data-target="#exampleModal-view">Yes</td>
+        <td >
+          <a href="#" data-toggle="modal" data-target="#exampleModal-view">
+            <i class="material-icons mr-5">visibility</i>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalLong-edit">
+            <i class="material-icons">create</i>
+          </a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <!-- Modal-view -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal-view" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-user" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body p-6">
+          <!-- media-object -->
+          <div class="media">
+            <img src="./assets/images/photo-3.jpeg" class="mr-5 photo-user" alt="user photo">
+            <div class="media-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="material-icons">close</span>
+              </button>
+              <span class="d-block mb-2">#1</span>
+              <span class="d-block">Admin</span>
+              <h5 class="mt-0 mb-2 font-size-lg">Emir Wicks</h5>
+              <span class="d-block font-size-sm color-dark-800">emir.wicks@mail.com</span>
+              <button type="button" class="btn btn-user w-100 d-flex align-items-center justify-content-between px-0" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <span class="verified font-size-sm  px-2 py-1">verified</span>
+                <span class="material-icons ml-1 text-secondary js-icon">expand_more</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id="collapseExample">
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-notice px-6 py-2" data-dismiss="modal">Deactivate</button>
+            <button type="button" class="btn btn-secondary px-6 py-2">Edit</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- modal-edit-admin -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modal-edit ">
+        <div class="modal-header border px-6">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit Admin</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body border px-6">
+          <!-- account -->
+          <form action="" class="form-edit">
+            <h5 class="mb-4">Account</h5>
+            <label for="name" class="font-size-sm font-weight-normal mb-1">Name</label>
+            <br>
+            <input type="text" id="name" class="w-100 py-4 px-4 mb-4 bg-color-primary" placeholder="Emir Wicks">
+            <br>
+            <label for="email" class="font-size-sm font-weight-normal mb-1">Email</label>
+            <br>
+            <input type="text" id="email" class="w-100 py-4 px-4 bg-color-primary" placeholder="emir.wicks@mail.com">
+          </form>
+          <hr class="hr my-5">
+
+          <!-- Verification -->
+          <h5 class="mb-4">Verification</h5>
+          <div class="d-flex justify-content-between">
+            <span class="d-flex align-items-center mb-4 font-weight-bold">
+              <i class="material-icons check mr-2">
+                check_circle
+              </i>
+              Verified
+            </span>
+            <span class="font-size-sm color-dark">2020/4/12</span>
+          </div>
+          
+          <button type="button" class="btn btn-outline-secondary btn-vertify w-100" disabled >Send Verification Mail</button>
+          <hr class="hr my-4">
+
+          <!-- access level -->
+          <h5 class="mb-4">Access Level</h5>
+          <select name="access" id="access" class="btn btn-access d-flex align-items-center justify-content-between w-100 px-4 ">
+            
+            Admin
+            <option value="admin" class="color-dark">Admin</option>
+          </select>
+          
+          <hr class="hr">
+
+          <!-- Custom Access -->
+          <h5 class="mb-4">Custom Access</h5>
+          <ul class="form-check p-0">
+            <label class="access-option font-weight-normal">Lecture
+              <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="access-option font-weight-normal">Coupon
+              <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="access-option font-weight-normal">Message
+              <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="access-option font-weight-normal">Setting
+              <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="access-option font-weight-normal">Task menu
+              <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            
+          </ul>
+          <hr class="hr my-4">
+
+          <!-- Deactivate -->
+          <h5 class="mb-4">Deactivate Account</h5>
+          <span class="d-flex align-items-center mb-4 color-notice">
+            <i class="material-icons warn mr-2">
+              warning
+            </i>
+            This cannot be undone!
+          </span>
+          <button type="button" class="btn btn-outline-notice font-weight-bold w-100 py-4 mb-8"  >Deactivate This Account</button>
+          
+        </div>
+        <div class="modal-footer border px-6">
+          <button type="button" class="btn btn-outline-secondary px-6 py-2" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary px-6 py-2">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 分頁 -->
+  <div class="row">
+    <div class="col d-flex justify-content-end">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link px-1 d-block page-arrow" href="#" aria-label="Previous">
+              <i aria-hidden="true" class="material-icons">chevron_left</i>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link px-1  d-block page-arrow" href="#" aria-label="Next">
+              <i aria-hidden="true" class="material-icons">chevron_right</i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</section>
+
+<!-- sidebar-active -->
+<style>
+  .menu-item .admin-active {
+    color: #2A8356;
+    border-left: 4px solid #2A8356;
+  }
+</style>
+<!-- modal-user:dorpdown-active -->
+<script>
+
+</script>

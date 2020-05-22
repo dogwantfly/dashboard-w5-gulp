@@ -1,0 +1,33 @@
+//sidebar
+.sidebar{
+    background-color: $primary;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    width: 296px;
+}
+.logo{
+    width: 151px;
+    height: 40px;
+    background-image: url('./../images/logo-ANSWER.svg');
+}
+.menu-item{
+    
+    a{
+        
+        border-left: 4px solid ;
+        border-color: transparent;
+        
+        &:hover{
+            border-left: 4px solid $secondary;
+        }
+    }
+}
+
+
+//main
+.main{
+    width: 100%;
+    margin-left: 296px;
+
+}

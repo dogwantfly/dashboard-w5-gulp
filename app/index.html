@@ -1,0 +1,294 @@
+---
+title: Assignment
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<header class="header  font-family-lato font-weight-bold py-5 mb-1">
+  
+  <div class="row ">
+    
+    <div class="col-2 d-flex align-items-center ">
+      <h2 class="title m-0 font-weight-bold ">Assignment</h2>
+      
+    </div>
+    
+    <div class="col-2">
+      <div class="dropdown">
+        <button class="btn btn-light-light d-flex align-items-center font-weight-bold px-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          All Courses
+          <span class="material-icons ml-1 text-secondary">expand_more</span>
+          
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button">HTML / CSS</button>
+          <button class="dropdown-item" type="button">Sass</button>
+          <button class="dropdown-item" type="button">Boostrap</button>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div class="col-8 d-flex justify-content-end align-items-center ">
+      
+        <input type="search" id="search">
+        <label for="search" class="d-flex align-items-center m-0">
+          <a href="#" class="d-block">
+            <span class="material-icons d-block">search</span>
+          </a>
+        </label>
+        
+        
+        <a href="#" class="d-flex align-items-center ml-4">
+          <span class="material-icons">notifications_active</span>
+        </a>
+       
+    </div>
+  </div>
+  
+</header>
+
+
+<section class="content pb-6">
+  <div class="row">
+    <div class="col">
+      <div class="dropdown">
+        <button class="btn btn-light-light d-flex align-items-center font-weight-bold px-0" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          All (4)
+          <span class="material-icons ml-1 text-secondary">expand_more</span>
+          
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button">HTML / CSS</button>
+          <button class="dropdown-item" type="button">Sass</button>
+          <button class="dropdown-item" type="button">Boostrap</button>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-end align-items-center">
+      <span class="comments">2 comments</span>
+    </div>
+  </div>
+  <div class="row">
+
+    <!-- 列表 -->
+    <div class="col-4">
+      <ul class="list-group">
+        <li class="list-group-item px-3 active">
+          <div class="row">
+            <div class="col-9">
+              <span class="font-size-xs">Chapter Assignment 2</span>
+            </div>
+            <div class="col-3">
+              <span class="font-size-xs d-block text-right">4 hrs ago</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+              <p class="font-weight-bold mb-0">Please check this file…</p>
+            </div>
+            <div class="col-4">
+              <span class="font-size-xs color-dark-800 d-block text-right">Emily Wang</span>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item px-3">
+          <div class="row">
+            <div class="col-9">
+              <span class="font-size-xs">Chapter Assignment 1</span>
+            </div>
+            <div class="col-3">
+              <span class="font-size-xs d-block text-right">12 hrs ago</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+              <p class="font-weight-bold mb-0">My Homework</p>
+            </div>
+            <div class="col-4">
+              <span class="font-size-xs color-dark-800 d-block text-right">David Xu</span>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item px-3">
+          <div class="row">
+            <div class="col-9">
+              <span class="font-size-xs">Final Assignment</span>
+            </div>
+            <div class="col-3">
+              <span class="font-size-xs d-block text-right">18 hrs ago</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+              <p class="font-weight-bold mb-0">Have a problem with this…</p>
+            </div>
+            <div class="col-4">
+              <span class="font-size-xs color-dark-800 d-block text-right">Tony Wei</span>
+            </div>
+          </div>
+        </li>        
+        <li class="list-group-item px-3">
+          <div class="row">
+            <div class="col-9">
+              <span class="font-size-xs">Final Assignment</span>
+            </div>
+            <div class="col-3">
+              <span class="font-size-xs d-block text-right">19 hrs ago</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+              <p class="font-weight-bold mb-0">Did I do it right?</p>
+            </div>
+            <div class="col-4">
+              <span class="font-size-xs color-dark-800 d-block text-right">Christina Lin</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-8">
+      <!-- 列表項目內容 -->
+      <div class="card  position-relative">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-11">
+              <span class="font-size-xs">Chapter Assignment 2 / HTML&CSS</span>
+              <h3 class="font-size-base font-weight-bold">Please check this file for me, thanks!</h3>
+            </div>
+            <div class="col-1 d-flex align-items-center">
+              <a href="#">
+                <span class="material-icons d-block">more_vert</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body mb-4">
+          <!-- 對話內容 -->
+          <div class="media">
+            <img src="./assets/images/photo-1.jpeg" class="align-self-start mr-2 photo" alt="stutent's photo">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">Emily Wang</h5>
+              <span class="font-size-xs d-block color-dark-800 mb-4">10:38 AM (4 hours ago)</span>
+              <p class="mb-4 font-size-sm">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <code class="code">div</code> is bigger than the height of the <code class="code">imgs</code>  ? There is a gap below the image, but it doesn’t seems to be a padding/margin. <br> What is the gap or extra space below image?</p>
+              <button type="button" class="btn btn-file px-4 py-2 font-weight-bold d-flex align-items-center">
+                <i class="material-icons mr-2">attach_file</i>
+                HW-2-David.zip
+              </button>   
+              <hr class="hr">                
+            </div>
+          </div>
+
+          <div class="media">
+            <img src="./assets/images/photo-2.jpeg" class="align-self-start mr-2 photo" alt="teacher's photo">
+            <div class="media-body">
+              <div class="row">
+                <div class="col-8">
+                  <h5 class="mt-0">Andy Chen (You)</h5>
+                  <span class="font-size-xs d-block color-dark-800 mb-4">13:24 AM (1 hours ago)</span>
+                </div>
+                <div class="col-4 d-flex  justify-content-end">
+                  <button class="material-icons btn-edit btn-star">star_border</button>
+                  <button class="material-icons btn-edit btn-star-fill">star</button>
+                  <button class="material-icons btn-edit">edit</button>
+                </div>
+              </div>
+              <p class="font-size-sm">Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.</p>
+              <p class="font-size-sm">You can:</p>
+              <ul class="recommand-list font-size-sm pl-7" >
+                <li class="">adjust the <code class="code">vertical-align</code>  of the image to position it elsewhere (e.g. the <code class="code">middle</code>  ) or  </li>
+                <li class="">change the <code class="code">display</code>  so it isn’t inline.</li>
+              </ul>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="row">
+          <div class="col-6 d-flex align-items-center">
+            <button class="material-icons btn-arrow mr-4">chevron_left</button>
+            <button class="material-icons btn-arrow">chevron_right</button>
+          </div>
+          <div class="col-6 d-flex align-items-center justify-content-end">
+            <button type="button" class="btn btn-outline-secondary px-6 py-2 font-weight-bold">Mark as read</button>
+            <button  class="btn btn-secondary px-6 py-2 font-weight-bold ml-4" onclick="displayManagerReply()">Reply</button>
+          </div>
+        </div>
+        <!-- 回覆區 -->
+        <div class="card manager-reply  position-absolute">
+          <div class="card-header px-5 py-4">
+            <div class="row">
+              <div class="col-3 pr-0">
+                <div class="dropdown">
+                  <button class="btn btn-primary d-flex align-items-center font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Body Text
+                    <span class="material-icons ml-2">arrow_drop_down</span>
+                    
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">h1</button>
+                    <button class="dropdown-item" type="button">h2</button>
+                    <button class="dropdown-item" type="button">h3</button>
+                    <button class="dropdown-item" type="button">h4</button>
+                    <button class="dropdown-item" type="button">h5</button>
+                    <button class="dropdown-item" type="button">h6</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-9 d-flex align-items-center ">
+                <a href="#" class="material-icons d-block mr-5">
+                  format_bold
+                </a>
+                
+                <a href="#" class="material-icons d-block mr-5">
+                  format_italic
+                </a>
+                <a href="#" class="material-icons d-block mr-5">
+                  format_list_bulleted
+                </a>
+                <a href="#" class="material-icons d-block mr-5">
+                  format_list_numbered
+                </a>
+                <a href="#" class="material-icons d-block mr-5">
+                  insert_photo
+                </a>
+                <a href="#" class="material-icons d-block mr-5">
+                  insert_link
+                </a>
+                <a href="#" class="material-icons d-block">
+                  code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <textarea name="reply-content" id="reply-content" row="10" placeholder="Reply an answer…" class="reply-content"></textarea>
+            <div class="row ">
+              <div class="col d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-secondary px-6 py-2 font-weight-bold" onclick="hideManagerReply()" >Cancel</button>
+                <button  class="btn btn-secondary px-6 py-2 font-weight-bold ml-4" onclick="displayManagerReply()">Reply</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- sidebar-active -->
+<style>
+  .menu-item .assignment-active {
+    color: #2A8356;
+    border-left: 4px solid #2A8356;
+  }
+</style>

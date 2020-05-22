@@ -1,0 +1,143 @@
+//pagination
+.page-arrow{
+    line-height: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.page-link{
+    color: $secondary;
+    border-color: $secondary;
+    &:hover{
+        color: $light;
+        background-color: $secondary;
+        border-color: $secondary;
+    }
+}
+
+
+//new admin
+
+.warn{
+    color: $notice;
+}
+.modal-body input{
+    border: 1px solid $gray-300;
+}
+.btn-vertify{
+    border-color: $border-color;
+    border-radius: 0;
+}
+.btn-access{
+    border: 1px solid $dark;
+    border-radius: 0;
+    color: $gray-600;
+    background-image: url('./../images/expand_more-black-18dp.svg');
+    background-position: 96% center;
+    background-repeat: no-repeat;
+    span{
+        color: $dark;
+    }
+}
+.modal-header{
+    border-bottom: 0;
+}
+.modal-footer{
+    border-top: 0;
+}
+
+//table
+.table th,td{
+    cursor: pointer;
+}
+
+
+// checkbox
+
+/* Customize the label (the container) */
+
+.access-option {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+/* Hide the browser's default checkbox */
+.access-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    font-weight: 400;
+  }
+/* Create a custom checkbox */
+.checkmark{
+    position: absolute;
+    border: 2px solid $dark;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $white;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+/* Show the checkmark when checked */
+.access-option input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.access-option .checkmark:after {
+    left: 6px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid $secondary;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+//modal-view 
+.modal-user{
+    max-width: 600px;
+}
+.photo-user{
+    height: 141px;
+}
+
+.verified{
+    background-color: $primary;
+    margin-right: 163px;
+}
+.js-icon{
+    transition: all 0.5s;
+    &.active{
+        transform: rotate(180deg);
+    }
+}
+//modal-edit
+.modal-edit .modal-body{
+    overflow-y: scroll;
+    max-height: 576px;
+    border-radius: 0px;   
+}
+.form-edit{
+    input::placeholder{
+        color: $dark;
+    }
+}
+.check{
+    color: $secondary;
+}
