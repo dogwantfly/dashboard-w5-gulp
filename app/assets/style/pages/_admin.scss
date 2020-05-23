@@ -134,13 +134,12 @@
     }
 }
 //modal-edit
-.modal-content{
+.modal-edit .modal-content{
     max-height: calc(100vh - 3.5rem);
     overflow: hidden;
 }
 .modal-edit .modal-body{
     overflow-y: scroll;
-    
     border-radius: 0px;   
 }
 .form-edit{
