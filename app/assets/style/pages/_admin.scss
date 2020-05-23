@@ -38,6 +38,7 @@
         color: $dark;
     }
 }
+
 .modal-header{
     border-bottom: 0;
 }
@@ -103,10 +104,10 @@
 }
 /* Style the checkmark/indicator */
 .access-option .checkmark:after {
-    left: 6px;
+    left: 5px;
     top: 0px;
-    width: 5px;
-    height: 10px;
+    width: 7px;
+    height: 12px;
     border: solid $secondary;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -133,9 +134,13 @@
     }
 }
 //modal-edit
+.modal-content{
+    max-height: calc(100vh - 3.5rem);
+    overflow: hidden;
+}
 .modal-edit .modal-body{
     overflow-y: scroll;
-    max-height: 576px;
+    
     border-radius: 0px;   
 }
 .form-edit{
